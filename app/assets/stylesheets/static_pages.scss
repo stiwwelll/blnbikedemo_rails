@@ -2,12 +2,117 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$font-stack:    Futura, Helvetica, sans-serif;
-$primary-color: pink;
+$font-stack: 'Inconsolata', Helvetica, sans-serif;
+$primary-color: #CFA600;
+$secondary-color: #194719;
 $align: center;
 
+html, body {
+  font-family: $font-stack;
+}
+
 h1 {
+  margin-top: 80px;
+  font: 2em;
+  color: $secondary-color;
+  text-align: $align;
+}
+
+h2 {
   font: 2em $font-stack;
   color: $primary-color;
   text-align: $align;
 }
+
+.navbar {
+   background-color: transparent;
+   border-color: transparent;
+}
+
+.navbar .nav > li > a {
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  letter-spacing: 0.05em;
+}
+
+.navbar .nav > li > a:hover {
+  color: #CFA600;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
+
+.logo {
+  position: relative;
+  color: $secondary-color;
+  float: right;
+  top: -8px;
+  text-transform: uppercase;
+}
+
+.carousel {
+  margin: 0px;
+  width: 100%;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  color: $primary-color;
+  text-shadow: none;
+  bottom: 5px;
+  padding-bottom: 0px;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+.about-headline {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.column-image img {
+  margin: 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.row p {
+  text-align: justify;
+}
+
+footer {
+  background-color: #194719;
+  color: white;
+  height: 50px;
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+footer p {
+  width: auto;
+  float: left;
+}
+
+.social-button {
+  float: right;
+  padding-right: 20px;
+}
+
+.social-button a {
+  color: white;
+}
+.fb-like {
+  position: relative;
+  top: -1px;
+  margin-left: 10px;
+}
+

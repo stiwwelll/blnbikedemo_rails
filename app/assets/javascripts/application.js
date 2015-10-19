@@ -13,4 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require_tree
+
+$(document).ready(function(){
+   var scroll_start = 0;
+   var startchange = $('nav');
+   var offset = startchange.offset();
+   $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('a').css('color', '#fff');
+          $('.logo').css('color', '#fff');
+          $('.navbar').css('background-color', '#194719');
+       } else {
+          $('a').css('color', '#194719');
+          $('.logo').css('color', '#194719');
+          $('.navbar').css('background-color', 'transparent');
+       }
+   });
+});

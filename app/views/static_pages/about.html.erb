@@ -1,4 +1,73 @@
-<p>This application is a test setup which is supposed to simulate a webshop offering tailored suits for hippos. We at TailorYourHippo are convinced that this is the market of the future. <br>
-Oviously our suits are all produced with the finest vegan, fair trade, organic fabrics by specialized hippo tailors in Romania. <br>
-Don't let your hippo just wear anything. We make your hippo happy!
-</p>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="">Home</a></li>
+            <li><a href="#work">About</a></li>
+            <li><a href="#faq">Faq</a></li>
+          </ul>
+          <h2 class="logo">bln bike shop</h2>
+          </div>
+        </div>
+      </div><!--end of nav container-->
+    </nav> <!--navbar ends here-->
+    <!--<div class="page-wrap"></div>-->
+    <div class="container intro" id="introduction">
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <h2 class="about-headline">About us</h2>
+          <div class="column-image">
+          <%= image_tag("workshop.jpg", :alt => "Grandpa") %>
+          </div>
+          <p>My family has been fixing and assembling bikes sinces the early 19th century (that's my grandpa on the left). Now it's up to me to keep the family business running.
+          </p>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <h2 class="about-headline">Philosphy</h2>
+          <div class="column-image">
+          <%= image_tag("philosophy.jpg", :alt => "Life") %>
+          </div>
+          <p>That's what I do all day...philosophying (is that a word?)about all the bikes that I can put together for my customers.
+         </p>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <h2 class="about-headline">Our Team</h2>
+          <div class="column-image">
+          <%= image_tag("team.jpg", :alt => "Marco") %>
+          </div>
+          <p>Basically this whole shop is being run by only one person...me...Marco. I'm responsible for the website and do all the work on the bikes to make them pretty and ready for all needs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+    <div class="copyright">
+      <p>&copy; Copyright 2015 Marco Steffensky // All rights reserved
+    </div>
+    <div class="social-button">
+      <a href="https://twitter.com/MSteffensky" class="twitter-follow-button" data-show-count="false">Follow @MSteffensky</a>
+      <div class="fb-like" data-href="https://www.facebook.com/RoadBIKE.magazin" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+    </footer>
+  </body>
