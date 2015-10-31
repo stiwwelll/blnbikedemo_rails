@@ -1,0 +1,50 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack: 'Inconsolata', Helvetica, sans-serif;
+$primary-color: #CFA600;
+$secondary-color: #194719;
+$third-color: #474747;
+$align: center;
+
+html, body {
+  font-family: $font-stack;
+  color: $third-color;
+}
+
+h1 {
+  margin-top: 80px;
+  font: 2em;
+  color: $secondary-color;
+  text-align: $align;
+}
+
+h2 {
+  font: 2em $font-stack;
+  color: $primary-color;
+  text-align: $align;
+}
+
+tr {
+  border: 1px solid $third-color;
+  width: 80%;
+  display: block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.table_product {
+  width: 20%;
+  padding-left: 15px;
+}
+
+.table_description {
+  width: 50%;
+}
+
+.table_picture {
+  width: 30%;
+}

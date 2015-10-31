@@ -5,10 +5,12 @@
 $font-stack: 'Inconsolata', Helvetica, sans-serif;
 $primary-color: #CFA600;
 $secondary-color: #194719;
+$third-color: #303030;
 $align: center;
 
 html, body {
   font-family: $font-stack;
+
 }
 
 h1 {
@@ -22,6 +24,10 @@ h2 {
   font: 2em $font-stack;
   color: $primary-color;
   text-align: $align;
+}
+
+p {
+  color: $third-color;
 }
 
 .navbar {
