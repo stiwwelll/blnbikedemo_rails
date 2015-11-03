@@ -1,12 +1,4 @@
 <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container anchor" id="contact">
       <div class="row container-contact">
         <div class="col-md-4 col-xs-12 col-s-12">
@@ -17,37 +9,28 @@
           </ul>
         <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJT7EGyLxPqEcR1kGF0NZVA30&key=AIzaSyDa7OqJ3_RPMkZgM1Xdd66c5Vi6r41l-MI" allowfullscreen></iframe>
         </div>
-      <div class="col-md-8 col-xs-12 col-s-12 contact-form">
-        <form>
-          <div class="form-group name">
-            <label for="name">your name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Bicicletta">
-          </div>
-          <div class="form-group phone">
-            <label for="phone">phone number</label>
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="555-5555">
-          </div>
-          <div class="form-group email">
-            <label for="name">email (*)</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="bike@bln.com" required="required">
-          </div>
-          <div class="form-group">
-            <label for="name">message</label>
-            <textarea placeholder="Wheel try to help you" class="form-control message-box" id="message" style="resize:none" cols="40" rows="5" maxlength=300></textarea>
-            <p id="char-count"></p>
-            <button type="submit" class="btn btn-default" id="submit-button">Submit</button>
-          </div>
-        </form>
+        <div class="col-md-8 col-xs-12 col-s-12 contact-form">
+          <form>
+            <div class="form-group name">
+              <label for="name">your name</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Bicicletta">
+            </div>
+            <div class="form-group phone">
+              <label for="phone">phone number</label>
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="555-5555">
+            </div>
+            <div class="form-group email">
+              <label for="name">email (*)</label>
+              <input class="form-control" type="email" id="email" name="email" placeholder="bike@bln.com" required="required">
+            </div>
+            <div class="form-group">
+              <label for="name">message</label>
+              <textarea placeholder="Wheel try to help you" class="form-control message-box" id="message" style="resize:none" cols="40" rows="5" maxlength=300></textarea>
+              <p id="char-count"></p>
+              <button type="submit" class="btn btn-default" id="submit-button">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
-    <footer class="site-footer">
-    <div class="copyright">
-      <p>&copy; Copyright 2015 Marco Steffensky // All rights reserved
-    </div>
-    <div class="social-button">
-      <a href="https://twitter.com/MSteffensky" class="twitter-follow-button" data-show-count="false">Follow @MSteffensky</a>
-      <div class="fb-like" data-href="https://www.facebook.com/RoadBIKE.magazin" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-    </div>
-    </footer>
   </body>
