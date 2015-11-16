@@ -1,47 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Our Bikes</h1>
+<div class="wrapper cf">
+  <button type="button" class="btn btn-success"><%= link_to 'New Product', new_product_path, :class => "button_text"  %></button>
+  <table>
+    <thead>
+     <% @products.each do |product| %>
+        <tr>
+          <td class="table_product"><%= product.name %>
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-xs"><%= link_to 'Show', product, :class => "button_text" %></button>
+              <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Edit', edit_product_path(product), :class => "button_text"  %></button>
+              <button type="button" class="btn btn-danger btn-xs"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, :class => "button_text"  %></button>
+            </div>
+          </td>
+          <td class="table_description"><%= product.description %></td>
+          <td class="table_picture"><%= image_tag(product.image_url, :class => 'list_image') %></td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
+</div>
 
-<table>
-  <!--
-  <thead>
-    <tr>
-      <th class="table_product">Super Bikator</th>
-      <th class="table_description">This bike will bring tears in your eyes. It's beautiful design and the quality components make you the king of the road in any city. The hand-crafted frame is a masterpiece of Italian craftmanship.</th>
-      <th class="table_picture"><%= image_tag("bike1_small.jpg", :alt => "Bianchi") %></th>
-    </tr>
-    <tr>
-      <th class="table_product">Bikosaurus Rex</th>
-      <th class="table_description">The king of all bikes. It's ability to run super fast makes it a predator out there. Although it is very loud and heavy, it's the strongest bike of them all.</th>
-      <th class="table_picture"><%= image_tag("bike2_small.jpg", :alt => "Peugeot") %></th>
-      <th colspan="3"></th>
-    </tr>
-      <th class="table_product">Bikernator</th>
-      <th class="table_description">This nike is so technical as if it comes straight from the future. It's so robust that you actually need to melt it down to kill it.</th>
-      <th class="table_picture"><%= image_tag("bike3_small.jpg", :alt => "Peugeot") %></th>
-      <th colspan="3"></th>
-    </tr>
-      <th class="table_product">Bikezilla</th>
-      <th class="table_description">Coming straight from Japan this bike is like a massive lizard beast that can destroy any city.</th>
-      <th class="table_picture"><%= image_tag("bike4_small.jpg", :alt => "Peugeot") %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
--->
-  <thead>
-    <% @products.each do |product| %>
-      <tr>
-        <th><%= product.name %></th>
-        <th><%= product.description %></th>
-        <th><%= product.image_url %></th>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </thead>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>

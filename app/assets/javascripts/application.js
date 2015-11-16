@@ -22,11 +22,11 @@ $(document).ready(function(){
    $(document).scroll(function() {
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
-          $('a').css('color', '#fff');
+          $('.navigation_link').css('color', '#fff');
           $('.logo').css('color', '#fff');
           $('.navbar').css('background-color', '#194719');
        } else {
-          $('a').css('color', '#194719');
+          $('.navigation_link').css('color', '#194719');
           $('.logo').css('color', '#194719');
           $('.navbar').css('background-color', 'transparent');
        }

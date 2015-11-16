@@ -17,17 +17,25 @@ h1 {
   margin-top: 80px;
   font: 2em;
   color: $secondary-color;
-  text-align: $align;
 }
 
 h2 {
   font: 2em $font-stack;
   color: $primary-color;
-  text-align: $align;
 }
+
+h3 {
+  color: $secondary-color;
+}
+
 
 p {
   color: $third-color;
+}
+
+.headline h1,
+.headline h2 {
+  text-align: $align;
 }
 
 .navbar {
