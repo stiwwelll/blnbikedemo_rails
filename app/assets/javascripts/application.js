@@ -24,11 +24,11 @@ $(document).ready(function(){
       if(scroll_start > offset.top) {
           $('.navigation_link').css('color', '#fff');
           $('.logo').css('color', '#fff');
-          $('.navbar').css('background-color', '#194719');
+          $('#navigation').css('background-color', '#194719');
        } else {
           $('.navigation_link').css('color', '#194719');
           $('.logo').css('color', '#194719');
-          $('.navbar').css('background-color', 'transparent');
+          $('#navigation').css('background-color', 'transparent');
        }
    });
 });

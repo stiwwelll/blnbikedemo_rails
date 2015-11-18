@@ -10,13 +10,15 @@ $align: center;
 
 html, body {
   font-family: $font-stack;
-
+  color: $third-color;
+  height: 100%;
 }
 
 h1 {
   margin-top: 80px;
   font: 2em;
   color: $secondary-color;
+  text-align: center;
 }
 
 h2 {
@@ -32,6 +34,16 @@ h3 {
 p {
   color: $third-color;
 }
+
+#wrap {
+  min-height: 100%
+}
+
+#main {
+  overflow: auto;
+  padding-top: 50px;
+}
+
 
 .headline h1,
 .headline h2 {
@@ -102,19 +114,22 @@ img {
   text-align: justify;
 }
 
-footer {
+.footer {
   background-color: #194719;
+  position: relative;
   color: white;
   height: 50px;
+  width: 100%;
   margin-top: 50px;
   padding-top: 15px;
-  padding-left: 20px;
+  clear: both;
 }
 
 footer p {
   width: auto;
   float: left;
   color: white;
+  padding-left: 20px;
 }
 
 .social-button {

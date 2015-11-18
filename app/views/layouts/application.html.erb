@@ -11,57 +11,60 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrap">
+  <div id="main" class="container clear-top">
     <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+    <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-    <!--<div class="page-wrap"></div>-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
+      <!--<div class="page-wrap"></div>-->
+      <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a class="navigation_link" href="/static_pages/index">Home</a></li>
+              <li><a class="navigation_link" href="/static_pages/about">About</a></li>
+              <li><a class="navigation_link" href="/static_pages/contact">Contact</a></li>
+            </ul>
+            <h2 class="logo">bln bike shop</h2>
+            </div>
           </div>
-          <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a class="navigation_link" href="/static_pages/index">Home</a></li>
-            <li><a class="navigation_link" href="/static_pages/about">About</a></li>
-            <li><a class="navigation_link" href="/static_pages/contact">Contact</a></li>
-          </ul>
-          <h2 class="logo">bln bike shop</h2>
-          </div>
-        </div>
-      </div><!--end of nav container-->
-    </nav> <!--navbar ends here-->
-  <div class="headline">
-  <h1>Welcome to BLN Bike Shop</h1>
-  <h2>Your source for used bikes in Berlin</h2>
-  </div>
-  <hr>
+        </div><!--end of nav container-->
+      </nav> <!--navbar ends here-->
+    <div class="headline">
+    <h1>Welcome to BLN Bike Shop</h1>
+    <h2>Your source for used bikes in Berlin</h2>
+    </div>
+    <hr>
 
 <%= yield %>
 
-<footer class="site-footer">
-  <div class="copyright">
-    <p>&copy; Copyright 2015 Marco Steffensky // All rights reserved
   </div>
-  <div class="social-button">
-    <a href="https://twitter.com/MSteffensky" class="twitter-follow-button" data-show-count="false">Follow @MSteffensky</a>
-    <div class="fb-like" data-href="https://www.facebook.com/RoadBIKE.magazin" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-  </div>
-</footer>
-
+</div>
+  <footer class="footer">
+    <div class="copyright">
+      <p>&copy; Copyright 2015 Marco Steffensky // All rights reserved
+    </div>
+    <div class="social-button">
+      <a href="https://twitter.com/MSteffensky" class="twitter-follow-button" data-show-count="false">Follow @MSteffensky</a>
+      <div class="fb-like" data-href="https://www.facebook.com/RoadBIKE.magazin" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+  </footer>
 </body>
 </html>
