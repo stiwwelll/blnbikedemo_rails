@@ -38,8 +38,13 @@ $third-color: #474747;
   display: table;
 }
 
-.list_image {
+.list_image_index {
   margin: 15px auto;
+  width: 75%;
+}
+
+.list_image_show {
+  width: 95%;
 }
 
 .btn-group {
