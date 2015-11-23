@@ -74,6 +74,10 @@ p {
   background-color: $secondary-color;
 }
 
+.navbar-collapse .collapse {
+  background-color: $secondary-color;
+}
+
 .logo {
   position: relative;
   color: $secondary-color;
@@ -165,5 +169,7 @@ footer p {
     padding-top: 10px;
     color: white;
   }
-
+  .copyright {
+    font-size: 0.8em;
+  }
 }
