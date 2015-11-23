@@ -4,8 +4,9 @@
         </div>
         <div class="product-price"><%= product.price %>&#8364</div>
         <div class="btn-group">
-          <button type="button" class="btn btn-success btn-xs"><%= link_to 'Show', product, :class => "button-text" %></button>
-          <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Edit', edit_product_path(product), :class => "button-text"  %></button>
-          <button type="button" class="btn btn-danger btn-xs"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, :class => "button-text"  %></button>
+
+          <%= link_to 'Show', product, :class => "btn btn-default btn-xs" %>
+          <%= link_to 'Edit', edit_product_path(product), :class => "btn btn-default btn-xs" %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, :class => "btn btn-default btn-xs" %>
         </div>
       </div>

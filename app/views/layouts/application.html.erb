@@ -11,7 +11,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="wrap">
   <div id="main" class="container clear-top">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -25,6 +24,7 @@
       <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container-fluid">
+            <h2 class="logo">bln bike shop</h2>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse"
               data-target=".navbar-collapse">
@@ -42,7 +42,6 @@
               <li><a class="navigation_link" href="/static_pages/about">About</a></li>
               <li><a class="navigation_link" href="/static_pages/contact">Contact</a></li>
             </ul>
-            <h2 class="logo">bln bike shop</h2>
             </div>
           </div>
         </div><!--end of nav container-->
@@ -56,7 +55,6 @@
 <%= yield %>
 
   </div>
-</div>
   <footer class="footer">
     <div class="copyright">
       <p>&copy; Copyright 2015 Marco Steffensky // All rights reserved

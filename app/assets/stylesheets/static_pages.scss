@@ -70,6 +70,10 @@ p {
   border-color: #fff;
 }
 
+.navbar-header {
+  background-color: $secondary-color;
+}
+
 .logo {
   position: relative;
   color: $secondary-color;
@@ -120,7 +124,7 @@ img {
   color: white;
   height: 50px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
   padding-top: 15px;
   clear: both;
 }
@@ -153,4 +157,13 @@ footer p {
 .carousel-indicators li,
 .carousel-indicators .active {
   background-color: $secondary-color;
+}
+
+@media (max-width:768px) {
+  .logo {
+    float:left;
+    padding-top: 10px;
+    color: white;
+  }
+
 }

@@ -12,9 +12,9 @@ $third-color: #474747;
   margin: 10px auto;
 }
 
-.btn-success {
+.btn-default:hover {
   background: $secondary-color;
-  border-color: $secondary-color;
+  color: white;
 }
 
 .product-list {
@@ -31,6 +31,10 @@ $third-color: #474747;
   color: $secondary-color;
 }
 
+.show_details {
+  margin-top: 130px;
+}
+
 .new-product {
   margin-top: 50px;
   margin-left: auto;
@@ -44,7 +48,16 @@ $third-color: #474747;
 }
 
 .list_image_show {
-  width: 95%;
+  width: 75%;
+  float: right;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
 }
 
 .btn-group {
@@ -70,4 +83,16 @@ $third-color: #474747;
   width: 70px;
 }
 
+.text_field {
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+}
+
+@media (max-width:768px) {
+  .navbar {
+   background-color: $secondary-color;
+   border-color: $secondary-color;
+}
+}
 
