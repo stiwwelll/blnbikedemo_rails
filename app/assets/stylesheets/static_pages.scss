@@ -74,9 +74,6 @@ p {
   background-color: $secondary-color;
 }
 
-.navbar-collapse .collapse {
-  background-color: $secondary-color;
-}
 
 .logo {
   position: relative;
@@ -107,12 +104,13 @@ img {
   background-image: none;
 }
 .about-headline {
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .column-image img {
   margin: 20px 0;
+  width: 100%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -172,4 +170,15 @@ footer p {
   .copyright {
     font-size: 0.8em;
   }
+  .footer {
+    height: 80px;
+  }
+  .social-button {
+    float: left;
+    padding-left: 20px;
+  }
+  .navbar .nav > li > a {
+    color: white;
+  }
+
 }
