@@ -32,7 +32,7 @@ $third-color: #474747;
 }
 
 .show_details {
-  margin-top: 130px;
+  margin-top: 40px;
 }
 
 .new-product {
@@ -93,6 +93,10 @@ $third-color: #474747;
   .navbar {
    background-color: $secondary-color;
    border-color: $secondary-color;
-}
+  }
+  .list_image_show {
+    width: 100%;
+    clear: both;
+  }
 }
 
