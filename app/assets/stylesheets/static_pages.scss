@@ -55,6 +55,10 @@ p {
    border-color: transparent;
 }
 
+.navbar .nav {
+  margin-right: 30px;
+}
+
 .navbar .nav > li > a {
   margin-top: 5px;
   text-transform: uppercase;
@@ -74,13 +78,21 @@ p {
   background-color: $secondary-color;
 }
 
+.navbar-form {
+  float: left;
+  position: relative;
+  top: 4px;
+}
+
 
 .logo {
   position: relative;
   color: $secondary-color;
-  float: right;
-  top: -8px;
+  top: -4px;
   text-transform: uppercase;
+  left: 10px;
+  margin-right: 20px;
+  float: right;
 }
 
 .carousel {
@@ -159,6 +171,20 @@ footer p {
 .carousel-indicators li,
 .carousel-indicators .active {
   background-color: $secondary-color;
+}
+
+.form-group {
+  margin-top: 8px;
+}
+
+.form-control {
+  height: 20px;
+}
+
+.glyphicon-search {
+  color: gray;
+  position: relative;
+  top: 3px;
 }
 
 @media (max-width:768px) {

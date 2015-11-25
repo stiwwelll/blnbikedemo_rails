@@ -83,11 +83,11 @@ $third-color: #474747;
   width: 60px;
 }
 
-.text_field {
-  width: 50%;
-  border-radius: 5px;
-  border: 1px solid #d0d0d0;
+.form-label {
+  color: $primary-color;
+  font-size: 1.2em;
 }
+
 
 @media (max-width:768px) {
   .navbar {
