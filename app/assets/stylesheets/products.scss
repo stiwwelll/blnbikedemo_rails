@@ -88,12 +88,7 @@ $third-color: #474747;
   font-size: 1.2em;
 }
 
-
 @media (max-width:768px) {
-  .navbar {
-   background-color: $secondary-color;
-   border-color: $secondary-color;
-  }
   .list_image_show {
     width: 100%;
     clear: both;
