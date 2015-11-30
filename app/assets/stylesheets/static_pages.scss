@@ -44,10 +44,13 @@ p {
   padding-top: 50px;
 }
 
-
 .headline h1,
 .headline h2 {
   text-align: $align;
+}
+
+.notice {
+  color: green;
 }
 
 .navbar {
@@ -200,6 +203,8 @@ footer p {
 .panel-default {
   border-color: transparent;
 }
+
+
 
 @media (max-width:768px) {
   .logo {
