@@ -43,4 +43,7 @@ if(!detectmob()){
   });
 }
 
+$(window).load(function(){
+  setTimeout(function(){ $('.alert').fadeOut() }, 500);
+});
 
