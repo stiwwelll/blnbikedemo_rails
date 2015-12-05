@@ -1,5 +1,7 @@
       <div class="product-list col-md-4 col-xs-12">
-        <div class="product-name"><%= product.name %> </div>
+        <div class="product-name">
+           <%= link_to product.name, product,:class => "button-text"   %>
+        </div>
         <div class="product-picture" data-toggle="tooltip" data-placement="top" title="<%= product.description %>"><%= image_tag(product.image_url, :class => 'list_image_index') %>
         </div>
         <div class="product-price"><%= product.price %>&#8364</div>

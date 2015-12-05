@@ -44,6 +44,6 @@ if(!detectmob()){
 }
 
 $(window).load(function(){
-  setTimeout(function(){ $('.alert').fadeOut() }, 500);
+  setTimeout(function(){ $('.alert').fadeOut() }, 1000);
 });
 

@@ -87,7 +87,6 @@ p {
   top: 4px;
 }
 
-
 .logo {
   position: relative;
   color: $secondary-color;
@@ -96,6 +95,51 @@ p {
   left: 10px;
   margin-right: 20px;
   float: right;
+}
+
+.dropdown {
+  width:200px;
+}
+.dropdown-menu>li>a {
+  color: $secondary-color;
+}
+
+.dropdown-menu>li>a:hover {
+  color: $primary-color;
+  background-color: transparent;
+}
+
+.dropdown ul.dropdown-menu {
+  border-radius:4px;
+  box-shadow:none;
+  width:200px;
+}
+.dropdown ul.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+  content: "";
+  border-bottom: 12px solid #ccc;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  top: -12px;
+  left: 14px;
+  z-index: 9;
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+  background-color: transparent;
+  color: $secondary-color;
 }
 
 .carousel {
@@ -109,7 +153,7 @@ img {
 }
 
 .carousel-caption {
-  color: $primary-color;
+  color: $secondary-color;
   text-shadow: none;
   bottom: 5px;
   padding-bottom: 0px;
