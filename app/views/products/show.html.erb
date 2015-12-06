@@ -1,25 +1,27 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="show_details col-md-4 col-xs-12">
-    <h3><strong>Name</strong></h3>
-    <p><%= @product.name %></p>
+    <h3><%= @product.name %></h3>
 
-    <h3><strong>Description</strong></h3>
+    <h4><strong>Description</strong></h4>
     <p><%= @product.description %></p>
 
-    <h3><strong>Color</strong></h3>
+    <h4><strong>Color</strong></h4>
     <p><%= @product.color %></p>
 
-    <h3><strong>Price</strong></h3>
+    <h4><strong>Price</strong></h4>
     <p><%= @product.price %>&#8364</p>
-
-    <div class="btn-group">
-    <%= link_to 'Edit', edit_product_path(@product), :class => "btn btn-default btn-xs" %>
-    <%= link_to 'Back', products_path, :class => "btn btn-default btn-xs" %>
-    </div>
   </div>
   <div class="col-md-8 col-xs-12">
-    <%= image_tag(@product.image_url, :class => 'list_image_show clearfix') %>
+    <%= image_tag(@product.image_url, :class => 'list_image_show') %>
+    <div class="glyphicon-align">
+      <%= link_to edit_product_path(@product), :class => 'button-text' do %>
+      <span class="glyphicon glyphicon-pencil"></span>Edit
+      <% end %>
+      <%= link_to products_path, :class => 'button-text' do %>
+      <span class="glyphicon glyphicon-step-backward"></span>Back
+      <% end %>
+    </div>
   </div>
 </div>
 

@@ -35,6 +35,10 @@ $third-color: #474747;
   margin-top: 40px;
 }
 
+.show_details > h3{
+  margin-bottom: 50px;
+}
+
 .new-product {
   margin-top: 50px;
   margin-left: auto;
@@ -49,7 +53,6 @@ $third-color: #474747;
 
 .list_image_show {
   width: 75%;
-  float: right;
 }
 
 .clearfix:after {
@@ -73,6 +76,11 @@ $third-color: #474747;
   color: white;
 }
 
+.button-text {
+  color: $secondary-color;
+  margin-right: 10px;
+}
+
 .button-text:hover {
   color: $primary-color;
   background: transparent;
@@ -86,6 +94,10 @@ $third-color: #474747;
 .form-label {
   color: $primary-color;
   font-size: 1.2em;
+}
+
+.glyphicon-align {
+  text-align: center;
 }
 
 @media (max-width:768px) {
