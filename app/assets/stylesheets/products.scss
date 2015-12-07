@@ -48,11 +48,16 @@ $third-color: #474747;
 
 .list_image_index {
   margin: 15px auto;
+  display: block;
   width: 75%;
 }
 
 .list_image_show {
   width: 75%;
+}
+
+.review_field {
+  margin-top: 100px;
 }
 
 .clearfix:after {

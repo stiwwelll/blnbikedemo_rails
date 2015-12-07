@@ -147,7 +147,7 @@ p {
   width: 100%;
 }
 
-img {
+.about_image {
   display: block;
   margin: 0 auto;
 }
@@ -253,8 +253,6 @@ footer p {
 .fb-like.fb_iframe_widget {
   top: -5px;
 }
-
-
 
 @media (max-width:768px) {
   .logo {

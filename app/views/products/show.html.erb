@@ -11,9 +11,12 @@
 
     <h4><strong>Price</strong></h4>
     <p><%= @product.price %>&#8364</p>
+
+    <h4><strong>Average Rating</strong></h4>
+    <div class="rated" data-score="<%= @product.average_rating %>"></div>
   </div>
   <div class="col-md-8 col-xs-12">
-    <%= image_tag(@product.image_url, :class => 'list_image_show') %>
+    <%= image_tag(@product.image_url, :class => 'list_image_show center-block') %>
     <div class="glyphicon-align">
       <%= link_to edit_product_path(@product), :class => 'button-text' do %>
       <span class="glyphicon glyphicon-pencil"></span>Edit
@@ -24,5 +27,7 @@
     </div>
   </div>
 </div>
+<%= render 'new_comment' %>
+<%= render 'comments' %>
 
 
