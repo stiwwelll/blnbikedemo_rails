@@ -105,6 +105,25 @@ $third-color: #474747;
   text-align: center;
 }
 
+.pagination {
+  display: table;
+  margin: 0px auto;
+}
+
+.pagination>.active>span {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}
+
+.pagination>.active>span:hover {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.pagination>li>a {
+  color: $secondary-color;
+}
+
 @media (max-width:768px) {
   .list_image_show {
     width: 100%;
