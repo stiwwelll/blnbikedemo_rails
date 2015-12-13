@@ -4,11 +4,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
+    if Rails.env.production?
       search_term = params[:q]
       @products = Product.where("name ilike ?", "%#{search_term}%")
     else
-      @products = Product.all
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
     end
   end
   # GET /products/1

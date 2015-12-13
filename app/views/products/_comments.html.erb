@@ -6,6 +6,8 @@
       <div class="rated" data-score="<%= comment.rating %>"></div>
       <p><%= comment.body %></p>
     </div>
+    <% if signed_in? && current_user.admin? %>
+      <%= link_to 'Destroy', product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   <% end %>
-    <%= link_to 'Destroy', product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
