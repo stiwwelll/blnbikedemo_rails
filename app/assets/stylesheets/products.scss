@@ -124,6 +124,10 @@ $third-color: #474747;
   color: $secondary-color;
 }
 
+.payment-button {
+  margin-top: 10px;
+}
+
 @media (max-width:768px) {
   .list_image_show {
     width: 100%;

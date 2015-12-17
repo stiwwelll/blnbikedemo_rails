@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row center-block">
   <div class="show_details col-md-4 col-xs-12">
     <h3><%= @product.name %></h3>
 
@@ -13,14 +13,17 @@
 
     <h4><strong>Average Rating</strong></h4>
     <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    <%= form_tag "/payment/create", class: "payment-button" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
   </div>
   <div class="col-md-8 col-xs-12">
-    <%= image_tag(@product.image_url, :class => 'list_image_show center-block') %>
+    <%= image_tag(@product.image_url, class: "list_image_show center-block") %>
     <div class="glyphicon-align">
-      <%= link_to edit_product_path(@product), :class => 'button-text' do %>
+      <%= link_to edit_product_path(@product), class: "button-text" do %>
       <span class="glyphicon glyphicon-pencil"></span>Edit
       <% end %>
-      <%= link_to products_path, :class => 'button-text' do %>
+      <%= link_to products_path, class: "button-text" do %>
       <span class="glyphicon glyphicon-step-backward"></span>Back
       <% end %>
     </div>

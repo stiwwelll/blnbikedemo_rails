@@ -56,4 +56,35 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include Devise::TestHelpers, :type => :controller
+
+  config.include FactoryGirl::Syntax::Methods
+end
+
+
+# Test::Unit
+class Test::Unit::TestCase
+  include FactoryGirl::Syntax::Methods
+end
+
+# Cucumber
+World(FactoryGirl::Syntax::Methods)
+
+# Spinach
+class Spinach::FeatureSteps
+  include FactoryGirl::Syntax::Methods
+end
+
+# Minitest
+class Minitest::Unit::TestCase
+  include FactoryGirl::Syntax::Methods
+end
+
+# Minitest::Spec
+class Minitest::Spec
+  include FactoryGirl::Syntax::Methods
+end
+
+# minitest-rails
+class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods
 end

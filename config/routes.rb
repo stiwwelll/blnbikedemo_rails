@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'charges/new'
+
+  get 'charges/create'
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   resources :products do
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
+
+  resources :charges
 
 
 
