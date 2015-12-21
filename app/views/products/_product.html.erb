@@ -4,7 +4,7 @@
         </div>
         <div class="product-picture" data-toggle="tooltip" data-placement="top" title="<%= product.description %>"><%= image_tag(product.image_url, :class => 'list_image_index') %>
         </div>
-        <div class="product-price"><%= product.price_cents %></div>
+        <div class="product-price"><%= product.price %></div>
         <% if signed_in? && current_user.admin? %>
         <div class="btn-group">
           <%= link_to 'Show', product, :class => "btn btn-default btn-xs" %>
