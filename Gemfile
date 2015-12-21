@@ -33,6 +33,8 @@ gem 'pony'
 gem 'figaro'
 gem 'factory_girl_rails'
 gem 'stripe'
+gem 'rest-client'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
