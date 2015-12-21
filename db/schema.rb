@@ -71,12 +71,10 @@ ActiveRecord::Schema.define(version: 20151217234811) do
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
-    t.datetime "created_at",                                             null: false
-    t.datetime "updated_at",                                             null: false
-    t.decimal  "price",          precision: 8, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.decimal  "price",       precision: 8, scale: 2
     t.string   "color"
-    t.integer  "price_cents",                            default: 0,     null: false
-    t.string   "price_currency",                         default: "EUR", null: false
   end
 
   create_table "users", force: :cascade do |t|
