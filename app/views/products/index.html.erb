@@ -5,7 +5,9 @@
     </div>
     <div class="new-product row">
       <div class="col-md-2 col-xs-12">
+        <% if signed_in? && current_user.admin? %>
         <%= link_to 'New Product', new_product_path, :class => "btn btn-default" %>
+        <% end %>
       </div>
     </div>
   </div>
