@@ -81,9 +81,10 @@ $third-color: #474747;
   color: white;
 }
 
-.button-text {
+.button-text a {
   color: $secondary-color;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .button-text:hover {
@@ -103,6 +104,7 @@ $third-color: #474747;
 
 .glyphicon-align {
   text-align: center;
+  margin-top: 10px;
 }
 
 .pagination {
@@ -124,7 +126,8 @@ $third-color: #474747;
   color: $secondary-color;
 }
 
-.payment-button {
+.payment-button,
+.update-button {
   margin-top: 10px;
 }
 

@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'charges/new'
-
-  get 'charges/create'
-
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
+  resources :payments, only: [:create]
 
   resources :products do
     resources :comments
@@ -23,7 +21,8 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
-  resources :charges
+
+
 
 
 
