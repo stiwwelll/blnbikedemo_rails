@@ -26,14 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'money-rails'
 gem 'devise'
 gem 'cancancan'
-gem 'ratyrate'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
-gem 'pony'
 gem 'figaro'
 gem 'factory_girl_rails'
 gem 'stripe'
-gem 'rest-client'
+gem 'mailgun_rails'
 
 
 # Use ActiveModel has_secure_password
@@ -64,4 +62,6 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+
 
