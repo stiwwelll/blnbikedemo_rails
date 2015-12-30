@@ -1,24 +1,24 @@
 class PaymentsController < ApplicationController
 
+before_filter :authenticate_user!
 # POST /payments
 # POST /payments.json
   def create
+    token = params[:stripeToken]
     @product = Product.find(params[:product_id])
     @user = current_user
-    token = params[:stripeToken]
-
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
         :customer => @user,
-        :amount => @product.price, # amount in cents, again
+        :amount => @product.price_cents, # amount in cents, again
         :currency => "eur",
         :source => token,
-        :description => token
+        :description => @product.description
       )
 
     if charge.paid
-      Order.create(:product_id => @product.id, :user_id => current_user,:total => @product.price)
+      Order.create(product_id: @product.id, user_id: @user, total: @product.price)
     end
 
     rescue Stripe::CardError => e

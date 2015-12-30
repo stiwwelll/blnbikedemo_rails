@@ -18,6 +18,6 @@ describe Comment do
     @comment = Comment.create!(body: "fuck that bike", user: @user, product: @product, rating: 1)
   end
   it "Including rude language" do
-    expect(@comment.clean_language).to_not be_valid
+    expect(@comment.clean_language).not_to be_valid
   end
 end

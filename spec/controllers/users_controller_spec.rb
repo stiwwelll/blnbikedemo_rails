@@ -12,7 +12,7 @@ describe UsersController, :type => :controller do
       end
 
       it "loads correct user details" do
-        get :show
+        get :show, id: @user.id
         expect(response).to have_http_status(200)
         expect(assigns(:user)).to eq @user
       end

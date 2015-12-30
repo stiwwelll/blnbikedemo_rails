@@ -35,7 +35,7 @@ describe Product do
     @product = Product.create!(description: "The best bike arround")
     end
     it "Description is included" do
-      expect(@product).to_not be_valid
+      expect(@product).not_to be_valid
     end
   end
 end
