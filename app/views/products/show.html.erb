@@ -13,8 +13,12 @@
 
     <h4><strong>Average Rating</strong></h4>
     <div class="rated" data-score="<%= @product.average_rating %>"></div>
-    <%= form_tag "/payments", class: "payment-button" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
+    <% if user_signed_in? %>
+      <%= form_tag "/payments", class: "payment-button" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    <% else %>
+        <%= redirect_to "Log in", new_user_session_path %>
     <% end %>
   </div>
   <div class="col-md-8 col-xs-12">
