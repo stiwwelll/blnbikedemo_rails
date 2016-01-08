@@ -62,9 +62,9 @@ MoneyRails.configure do |config|
   # Default value is nil meaning "ignore this option".
   # Example:
   #
-  config.default_format = {
-     :no_cents_if_whole => false,
-     :symbol => "€",
-     :sign_after_symbol => true
-   }
+  #config.default_format = {
+  #   :no_cents_if_whole => false,
+  #   :symbol => "€",
+  #   :sign_after_symbol => true
+  # }
 end

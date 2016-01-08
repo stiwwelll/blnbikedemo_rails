@@ -18,7 +18,7 @@
         <%= render partial: "shared/stripe_checkout_button" %>
       <% end %>
     <% else %>
-        <%= redirect_to "Log in", new_user_session_path %>
+      <%= link_to "Log in to proceed with payment", new_user_session_path, :class => "button-text" %>
     <% end %>
   </div>
   <div class="col-md-8 col-xs-12">
