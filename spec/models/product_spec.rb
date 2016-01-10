@@ -8,34 +8,41 @@ describe Product do
     @product.comments.create!(rating: 3, user: @user, body: "Alright!")
     @product.comments.create!(rating: 5, user: @user, body: "Spitze!")
   end
+
   it "returns the average rating of all comments" do
     expect(@product.average_rating).to eq 3
   end
 end
 
 describe Product do
-  context "Product name and description present" do
+  context "when name and description present" do
     before do
-    @product = Product.create!(name: "race bike", description: "The best bike arround")
+      @product = Product.new(name: "race bike", description: "The best bike arround")
     end
-    it "Product name and description are included" do
+
+    it "name and description are included" do
       expect(@product).to be_valid
     end
   end
-  context "Product name present" do
+
+  context "when name present" do
     before do
-    @product = Product.create!(name: "race bike")
+      @product = Product.new(name: "race bike")
     end
-    it "Product name is included" do
+
+    it "is included" do
       expect(@product).to be_valid
     end
   end
-  context "Product name present" do
+
+  context "when name is not present" do
     before do
-    @product = Product.create!(description: "The best bike arround")
+      @product = Product.new(description: "The best bike arround")
     end
-    it "Description is included" do
+
+    it "is not valid" do
       expect(@product).to_not be_valid
+      expect(@product.errors[:name]).to be_present
     end
   end
 end
