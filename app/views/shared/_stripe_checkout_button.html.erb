@@ -1,13 +1,17 @@
-<form action="" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-amount= <%= @product.price_cents %>
-    data-name= <%= @product.name %>
-    data-description= "Say Hi! to your new bike"
-    data-image= <%= image_path("128x128.jpg") %>
-    data-currency= "eur"
-    data-locale="auto">
-  </script>
-  <%= hidden_field_tag(:product_id, @product.id) %>
-</form>
+<% if user_signed_in? %>
+  <form action="" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-amount= <%= @product.price_cents %>
+      data-name= <%= @product.name %>
+      data-description= "Say Hi! to your new bike"
+      data-image= <%= image_path("128x128.jpg") %>
+      data-currency= "eur"
+      data-locale="auto">
+    </script>
+    <%= hidden_field_tag(:product_id, @product.id) %>
+  </form>
+<% else %>
+  <%= link_to 'Login to proceed with payment', new_user_session_path, class: "button-text" %>
+<% end %>
