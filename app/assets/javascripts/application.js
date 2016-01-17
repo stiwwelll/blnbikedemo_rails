@@ -59,5 +59,11 @@ $(document).on('ready page:load', function(){
 
 $(document).on('ready page:load', function () {
   $('.img-zoom').elevateZoom();
+  $('.img-zoom').elevateZoom({zoomWindowPosition: 1, zoomWindowOffetx: -1000});
 });
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

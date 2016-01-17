@@ -18,7 +18,7 @@
     <% end %>
   </div>
   <div class="col-md-8 col-xs-12">
-    <%= image_tag(@product.image_url, class: "list_image_show center-block img-zoom", data: {zoom_image: @product.image_url }) %>
+    <%= image_tag(@product.image_url, class: "list_image_show center-block img-zoom", data: {zoom_image: image_path(@product.image_url) }) %>
     <div class="glyphicon-align">
       <% if signed_in? && current_user.admin? %>
         <%= link_to edit_product_path(@product), class: "button-text" do %>
