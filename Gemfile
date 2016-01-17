@@ -28,6 +28,7 @@ gem 'will_paginate-bootstrap'
 gem 'figaro'
 gem 'stripe'
 gem 'mailgun_rails'
+gem 'brakeman', :require => false
 
 
 # Use ActiveModel has_secure_password
