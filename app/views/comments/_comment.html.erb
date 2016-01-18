@@ -1,0 +1,12 @@
+<div class="row">
+<hr>
+<p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+	<% if can? :destroy, comment %>
+    <%= link_to ('<span class="glyphicon glyphicon-remove"></span> Delete').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-text pull-right" %>
+	<% end %>
+	<% if can? :update, comment %>
+		<%= link_to ('<span class="glyphicon glyphicon-pencil"></span> Edit').html_safe, edit_product_comment_path(@product, comment), class: "button-text pull-right" %>
+	<% end %>
+	<div class="rated" data-score="<%= comment.rating %>"></div>
+	<p><%= comment.body %></p>
+</div>

@@ -47,7 +47,7 @@ $(window).load(function(){
   setTimeout(function(){ $('.alert').fadeOut() }, 1000);
 });
 
-$(document).on('ready page:load', function(){
+$(document).on('ready page:load', function /*afterLoad*/() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
       readOnly: true,
@@ -56,6 +56,8 @@ $(document).on('ready page:load', function(){
       }
     });
 });
+/* $(document).ajaxSuccess(function(afterLoad) {
+  }); */
 
 $(document).on('ready page:load', function () {
   $('.img-zoom').elevateZoom();
