@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+.order-value {
+	height: 2.5em;
+}
+
+.product-selector {
+	height: 2.5em;
+}

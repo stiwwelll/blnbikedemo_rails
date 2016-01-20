@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree
+//= require angular
+//= require angular-resource
 
 function detectmob() {
    if(window.innerWidth <= 768) {
@@ -47,7 +49,8 @@ $(window).load(function(){
   setTimeout(function(){ $('.alert').fadeOut() }, 1000);
 });
 
-$(document).on('ready page:load', function /*afterLoad*/() {
+
+var addComment = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
       readOnly: true,
@@ -55,9 +58,11 @@ $(document).on('ready page:load', function /*afterLoad*/() {
         return $(this).attr('data-score');
       }
     });
-});
-/* $(document).ajaxSuccess(function(afterLoad) {
-  }); */
+  };
+
+$(document).on('ready page:load', addComment);
+$(document).bind("ajaxComplete", addComment);
+
 
 $(document).on('ready page:load', function () {
   $('.img-zoom').elevateZoom();

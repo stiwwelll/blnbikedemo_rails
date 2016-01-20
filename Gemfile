@@ -29,6 +29,7 @@ gem 'figaro'
 gem 'stripe'
 gem 'mailgun_rails'
 gem 'brakeman', :require => false
+gem 'angularjs-rails'
 
 
 # Use ActiveModel has_secure_password
