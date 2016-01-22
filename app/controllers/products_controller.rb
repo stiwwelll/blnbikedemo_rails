@@ -14,8 +14,10 @@ class ProductsController < ApplicationController
   end
 
   def show
-    logger.debug "Product: #{@product.name}"
     @comments = @product.comments.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    if request.path != product_path(@product)
+    redirect_to @product, status: :moved_permanently
+    end
   end
 
   def new
@@ -62,7 +64,7 @@ class ProductsController < ApplicationController
   private
 
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.friendly.find(params[:id])
     end
 
     def product_params

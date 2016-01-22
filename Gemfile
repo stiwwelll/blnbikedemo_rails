@@ -33,6 +33,7 @@ gem 'angularjs-rails'
 gem 'dalli'
 gem 'redis-rails'
 gem 'newrelic_rpm'
+gem 'friendly_id'
 
 
 # Use ActiveModel has_secure_password
