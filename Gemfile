@@ -31,6 +31,8 @@ gem 'mailgun_rails'
 gem 'brakeman', :require => false
 gem 'angularjs-rails'
 gem 'dalli'
+gem 'redis-rails'
+gem 'newrelic_rpm'
 
 
 # Use ActiveModel has_secure_password
