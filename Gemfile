@@ -30,6 +30,7 @@ gem 'stripe'
 gem 'mailgun_rails'
 gem 'brakeman', :require => false
 gem 'angularjs-rails'
+gem 'dalli'
 
 
 # Use ActiveModel has_secure_password

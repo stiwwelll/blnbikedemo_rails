@@ -1,21 +1,27 @@
 <div class="row">
   <div class="show_details col-md-4 col-xs-12">
-    <h3><%= @product.name %></h3>
+    <% cache @product do %>
+      <h3><%= @product.name %></h3>
 
-    <h4><strong>Description</strong></h4>
-    <p><%= @product.description %></p>
-
-    <h4><strong>Color</strong></h4>
-    <p><%= @product.color %></p>
-
-    <h4><strong>Price</strong></h4>
-    <p><%= humanized_money_with_symbol @product.price %></p>
-
-    <h4><strong>Average Rating</strong></h4>
-    <div class="rated" data-score="<%= @product.average_rating %>"></div>
-    <%= form_tag "/payments", class: "payment-button" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
+      <h4><strong>Description</strong></h4>
+      <p><%= @product.description %></p>
     <% end %>
+
+      <h4><strong>Color</strong></h4>
+      <p><%= @product.color %></p>
+
+      <h4><strong>Price</strong></h4>
+      <p><%= humanized_money_with_symbol @product.price %></p>
+
+      <h4><strong>Average Rating</strong></h4>
+      <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      <%= form_tag "/payments", class: "payment-button" do %>
+        <% if signed_in? %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% else %>
+          <% link_to("Please login before proceeding with your order", new_user_session_path, class: "btn btn-default") %> 
+        <% end %>
+      <% end %>
   </div>
   <div class="col-md-8 col-xs-12">
     <%= image_tag(@product.image_url, class: "list_image_show center-block img-zoom", data: {zoom_image: image_path(@product.image_url) }) %>
