@@ -10,5 +10,11 @@
   <%= @user.last_name %>
 </p>
 
+<p>
+  <strong>Number of comments:</strong>
+  <%= @comment_count %>
+</p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

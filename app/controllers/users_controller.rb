@@ -12,6 +12,11 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @comment_count = $redis.get("cache:users:#{@user.id}:comment_count")
+    if @comment_count.blank?
+      @comment_count = Comment.where(user_id: @user.id).count
+      $redis.set("cache:users:#{@user.id}:comment_count", @comment_count)
+    end
   end
 
   # GET /users/new

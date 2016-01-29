@@ -9,12 +9,19 @@ class Comment < ActiveRecord::Base
 
   validate :clean_language
 
+  after_create :update_redis
+
+
   private
 
   def clean_language
     if body.include? "fuck"
       errors.add(:clean_language, "Behave!")
     end
+  end
+
+  def update_redis
+    $redis.incr("cache:users:#{user_id}:comment_count")
   end
 
 end
