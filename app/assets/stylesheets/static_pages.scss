@@ -58,8 +58,8 @@ ul {
 }
 
 .navbar {
-   background-color: white;
-   border-color-bottom: $secondary-color;
+  background-color: $secondary-color;
+  border: none;
 }
 
 .navbar .nav {
@@ -69,7 +69,7 @@ ul {
 .navbar .nav > li > a {
   margin-top: 5px;
   text-transform: uppercase;
-  color: $secondary-color;
+  color: #fff;
   letter-spacing: 0.05em;
 }
 
@@ -82,7 +82,24 @@ ul {
 }
 
 .navbar-header {
-  background-color: $secondary-color;
+  border: none;
+}
+
+.logo-mobile {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  display: none;
+}
+
+.logo-full-width {
+  position: relative;
+  color: #fff;
+  top: -4px;
+  text-transform: uppercase;
+  left: 10px;
+  margin-right: 20px;
+  float: right;
 }
 
 .navbar-form {
@@ -91,19 +108,16 @@ ul {
   top: 4px;
 }
 
-.logo {
+.glyphicon-search {
+  color: #fff;
   position: relative;
-  color: $secondary-color;
-  top: -4px;
-  text-transform: uppercase;
-  left: 10px;
-  margin-right: 20px;
-  float: right;
+  top: 3px;
 }
 
 .dropdown {
   width:200px;
 }
+
 .dropdown-menu>li>a {
   color: $secondary-color;
 }
@@ -134,8 +148,8 @@ ul {
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
   position: absolute;
-  top: -12px;
-  left: 14px;
+  top: -10px;
+  left: 16px;
   z-index: 9;
 }
 
@@ -143,7 +157,7 @@ ul {
 .navbar-inverse .navbar-nav>.open>a:focus,
 .navbar-inverse .navbar-nav>.open>a:hover {
   background-color: transparent;
-  color: $secondary-color;
+  color: #fff;
 }
 
 .carousel {
@@ -166,6 +180,16 @@ ul {
 .carousel-control.left, .carousel-control.right {
   background-image: none;
 }
+
+.carousel-control:hover {
+  background-color: transparent;
+}
+
+.carousel-indicators li,
+.carousel-indicators .active {
+  background-color: $secondary-color;
+}
+
 .about-headline {
   text-align: center;
   text-transform: uppercase;
@@ -204,24 +228,12 @@ footer p {
 .social-button {
   float: right;
   padding-right: 20px;
+  position: relative;
+  top: -5%;
 }
 
 .social-button a {
   color: white;
-}
-.fb-like {
-  position: relative;
-  top: -1px;
-  margin-left: 10px;
-}
-
-.carousel-control:hover {
-  background-color: transparent;
-}
-
-.carousel-indicators li,
-.carousel-indicators .active {
-  background-color: $secondary-color;
 }
 
 .form-group {
@@ -230,12 +242,6 @@ footer p {
 
 .form-control {
   height: 20px;
-}
-
-.glyphicon-search {
-  color: gray;
-  position: relative;
-  top: 3px;
 }
 
 #message {
@@ -254,35 +260,93 @@ footer p {
   border-color: transparent;
 }
 
-.fb-like.fb_iframe_widget {
-  top: -5px;
-}
-
 @media (max-width:768px) {
-  .logo {
-    float:left;
-    padding-top: 10px;
-    color: white;
+
+  .logo-full-width {
+  display: none;
   }
+
+  .footer {
+    height: 60px;
+  }
+
   .copyright {
     font-size: 0.8em;
+    position: relative;
+    top: 0;
+    width: 60%;
+    margin-bottom: 0;
   }
-  .footer {
-    height: 80px;
-  }
+
   .social-button {
-    float: left;
-    padding-left: 20px;
+    top: 4%;
   }
-  .navbar .nav > li > a {
-    color: white;
-  }
-  .navbar {
-   background-color: $secondary-color;
-   border-color: $secondary-color;
-  }
+
   .container {
     width: 100%;
     margin: 5px auto;
-}
+  }
+
+  .logo-mobile {
+    display: block;
+    margin-left: 30px;
+  }
+
+  .container-fluid > .navbar-collapse {
+    margin-left: 0;
+    border-top: none;
+  }
+
+  .dropdown-menu {
+    width: 100px;
+    float: right;
+  }
+  
+  .dropdown ul.dropdown-menu:before,
+  .dropdown ul.dropdown-menu:after {
+    border: none;
+  }
+
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
+  }
+
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: $primary-color;
+    background-color: transparent;
+  }
+
+  .navbar-form {
+    float: right;
+  }
+
+  .form-group {
+    float: left;
+  }
+
+  .search-input {
+    width: 80%;
+    float: right;
+  }
+
+  .navbar-inverse .navbar-form {
+    border: none;
+    float: left;
+    margin-top: 0;
+  }
+
+  .name,
+  .email,
+  .message {
+    width: 100%;
+  }
+
+  .address ul,
+  .address iframe {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+  }
 }

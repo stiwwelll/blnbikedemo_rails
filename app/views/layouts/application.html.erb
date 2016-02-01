@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Berlin Bike Shop</title>
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,14 +15,6 @@
   <body>
     <div id="wrap">
       <div id="main" class="container clear-top">
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-          fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
           <!--<div class="page-wrap"></div>-->
           <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
@@ -36,18 +29,20 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
+
+                  <h2 class="logo-mobile">bln bike shop</h2>
                 </div>
 
                 <div class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav">
-                  <li><%= link_to "Home", static_pages_landing_page_path, :class => "navigation_link" %></li>
-                  <li><%= link_to "Shop", products_url, :class => "navigation_link" %></li>
-                  <li><%= link_to "About", static_pages_about_path, :class => "navigation_link" %></li>
-                  <li><%= link_to "Contact", static_pages_contact_path, :class => "navigation_link" %></li>
+                  <li><%= link_to "Home", static_pages_landing_page_path, class: "navigation_link" %></li>
+                  <li><%= link_to "Shop", products_url, class: "navigation_link" %></li>
+                  <li><%= link_to "About", static_pages_about_path, class: "navigation_link" %></li>
+                  <li><%= link_to "Contact", static_pages_contact_path, class: "navigation_link" %></li>
                   <li class="dropdown navigation_link">
                     <% if user_signed_in? %>
-                      <%= link_to current_user.first_name, nil, :class => "dropdown-toggle navigation_link", :data => {:toggle => "dropdown"}  %>
+                      <%= link_to current_user.first_name, nil, class: "dropdown-toggle navigation_link", data: {toggle: "dropdown"}  %>
                         <ul class="dropdown-menu">
                           <li><%= link_to user_path(current_user) do %>
                             My Profile
@@ -67,14 +62,14 @@
                           <% end %>
                           </li>
                           <li class="divider"></li>
-                          <li><%= link_to destroy_user_session_path, :method => :delete do %>
+                          <li><%= link_to destroy_user_session_path, method: :delete do %>
                             Signout
                             <span class="glyphicon glyphicon-log-out pull-right"}></span>
                           <% end %>
                           </li>
                         </ul>
                     <% else %>
-                          <li><%= link_to('Login', new_user_session_path, :class => "navigation_link") %></li>
+                          <li><%= link_to('Login', new_user_session_path, class: "navigation_link") %></li>
                     <% end %>
                   </li>
                 </ul>
@@ -82,11 +77,11 @@
                 <%= form_tag("/products", method: "get", class: "navbar-form" ) do %>
                   <div class="form-group">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search" ) %>
+                    <%= text_field_tag(:q, nil, class: "form-control search-input", placeholder: "Search" ) %>
                   </div>
                 <% end %>
 
-                 <h2 class="logo">bln bike shop</h2>
+                 <h2 class="logo-full-width">bln bike shop</h2>
                 </div>
               </div>
             </div><!--end of nav container-->
@@ -109,8 +104,8 @@
     <footer class="footer">
       <p class="copyright">&copy; Copyright 2015 Marco Steffensky // All rights reserved
       <div class="social-button">
-        <a href="https://twitter.com/MSteffensky" class="twitter-follow-button" data-show-count="false">Follow @MSteffensky</a>
-        <div class="fb-like" data-href="https://www.facebook.com/RoadBIKE.magazin" data-width="50" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        <a href="https://twitter.com/msteffensky" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+        <a href="https://www.facebook.com/marco.sky.14" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
       </div>
     </footer>
   </body>

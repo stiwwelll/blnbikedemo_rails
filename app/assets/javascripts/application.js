@@ -18,34 +18,6 @@
 
 //= require_tree
 
-function detectmob() {
-   if(window.innerWidth <= 768) {
-     return true;
-   } else {
-     return false;
-   }
-}
-
-if(!detectmob()){
-  $(document).ready(function(){
-     var scroll_start = 0;
-     var startchange = $('nav');
-     var offset = startchange.offset();
-     $(document).scroll(function() {
-        scroll_start = $(this).scrollTop();
-        if(scroll_start > offset.top) {
-            $('.navigation_link').css('color', '#fff');
-            $('.logo').css('color', '#fff');
-            $('#navigation').css('background-color', '#194719');
-         } else {
-            $('.navigation_link').css('color', '#194719');
-            $('.logo').css('color', '#194719');
-            $('#navigation').css('background-color', 'transparent');
-         }
-     });
-  });
-}
-
 $(window).load(function(){
   setTimeout(function(){ $('.alert').fadeOut() }, 1000);
 });
@@ -73,5 +45,3 @@ $(document).on('ready page:load', function () {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
-
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
