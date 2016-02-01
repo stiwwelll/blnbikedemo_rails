@@ -63,7 +63,7 @@ ul {
 }
 
 .navbar .nav {
-  margin-right: 30px;
+  margin-right: -2em;
 }
 
 .navbar .nav > li > a {
@@ -260,6 +260,9 @@ footer p {
   border-color: transparent;
 }
 
+
+
+
 @media (max-width:768px) {
 
   .logo-full-width {
@@ -333,6 +336,10 @@ footer p {
     border: none;
     float: left;
     margin-top: 0;
+  }
+
+  .divider {
+    display: none;
   }
 
   .name,
