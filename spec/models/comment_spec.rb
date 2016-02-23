@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Comment do
   before do
-    @product = Product.create!(name: "race bike", description: "best bike there is")
-    @user    = User.create!(email: "marco@test.de", password: "123123123")
+    @product = FactoryGirl.build(:product)
+    @user = FactoryGirl.build(:user)
     @comment = Comment.create!(body: "great bike", user: @user, product: @product, rating: 5)
   end
 
@@ -14,8 +14,8 @@ end
 
 describe Comment do
   before do
-    @product = Product.new(name: "race bike", description: "best bike there is")
-    @user    = User.new(email: "marco@test.de", password: "123123123")
+    @product = FactoryGirl.build(:product)
+    @user = FactoryGirl.build(:user)
     @comment = Comment.new(body: "fuck that bike", user: @user, product: @product, rating: 1)
   end
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe UsersController, :type => :controller do
+describe UsersController, type: :controller do
   before do
     @user = FactoryGirl.create(:user)
   end
@@ -25,5 +25,6 @@ describe UsersController, :type => :controller do
       end
     end
   end
+
 end
 

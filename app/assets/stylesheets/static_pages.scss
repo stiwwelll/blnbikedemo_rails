@@ -62,6 +62,10 @@ ul {
   border: none;
 }
 
+.navbar-collapse {
+  width: 100%;
+}
+
 .navbar .nav {
   margin-right: -2em;
 }
@@ -97,9 +101,9 @@ ul {
   color: #fff;
   top: -4px;
   text-transform: uppercase;
-  left: 10px;
-  margin-right: 20px;
   float: right;
+  margin-left: 30px;
+  margin-right: 15px;
 }
 
 .navbar-form {
@@ -112,10 +116,6 @@ ul {
   color: #fff;
   position: relative;
   top: 3px;
-}
-
-.dropdown {
-  width:200px;
 }
 
 .dropdown-menu>li>a {

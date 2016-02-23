@@ -11,7 +11,7 @@ class Ability
       can :manage, :all
     else
       can [:read, :create], Comment
-      can [:update, :destroy], Comment, :user_id => user.id
+      can [:update, :destroy], Comment, user_id: user.id
     end
   end
 end
