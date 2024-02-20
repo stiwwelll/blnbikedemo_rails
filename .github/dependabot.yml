@@ -7,8 +7,6 @@ version: 2
 updates:
   - package-ecosystem: bundler
     directory: "/"
-    registries:
-      - ruby-github-wt
     schedule:
       interval: daily
       time: "09:00"
